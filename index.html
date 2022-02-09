@@ -4,29 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Spline+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.scss">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Cyberpunk</title>
 </head>
 <body>
-    <video autoplay loop poster="assets/cyberpunk.jpg" id="bgvid">
-        <source src="assets/mylivewallpapers.com-Cyberpunk-2077-City.webm" type="video/webm">
-        <source src="assets/mylivewallpapers.com-Cyberpunk-2077-City.mp4" type="video/mp4">
-    </video>
-    <header class="header-top">
-         <div id="logo">
+<header class="header-top">
+    <div class="bg-overall">
+        <video autoplay muted loop id="bgvid">
+            <source src="assets/mylivewallpapers.com-Cyberpunk-2077-City.mp4" type="video/mp4">
+            <source src="assets/MOBILE-Cyberpunk-2077-City.mp4" type="video/mp4" media=all and (max-width: 600px)>
+        </video>
+    <audio id="audio-bg" controls autoplay loop>
+        <source src="assets/cyberpunk-bg.mp3" type="audio/mp3">
+    </audio>
+        <logo id="logo">
             <img src="cyberpunk-logo" alt="cyberpunk-logo">
+        </logo>
+    <nav class="navbar">
+        <div class="nav-list">
+            <a href="01" class="nav">HOME</a>
+            <a href="02" class="nav">PLAY</a>
+            <a href="03" class="nav">RESPONSIVE</a>
+            <a href="04" class="nav">CREDITS</a>
         </div>
-        <div class="navbar">
-            <a href="01" class="nav">01</a>
-            <a href="02" class="nav">02</a>
-            <a href="03" class="nav">03</a>
-            <a href="04" class="nav">04</a>
-        </div>
-    </header>
-    <main class="main-conteneur">
+    </nav>
+</header>
+    <!-- <main class="main-conteneur">
         <span class="text-contenu">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nam pariatur tenetur quia eligendi dolor perspiciatis assumenda animi suscipit dolores voluptate sit modi illo quidem cum culpa, laborum natus quam? Culpa nam sapiente ipsa, provident animi magni ratione minima soluta veniam nemo quae quisquam earum velit fugiat quod facere debitis obcaecati doloribus voluptatum. Laudantium beatae, voluptatem saepe quis tenetur neque quia non doloremque. Et quae illum labore fugit quaerat recusandae sint dolore! Ipsam libero nihil suscipit blanditiis harum vitae nulla nesciunt incidunt eveniet similique, repellat maxime. Commodi obcaecati, rerum excepturi inventore deleniti accusantium incidunt nisi iure. Qui commodi ea repellendus dolor!</span>
-    </main>
+    </main> -->
+<footer>
+    <div class="container3">
+        <label class="switch2">
+          <span class="sound_label">
+            <img src="https://img.icons8.com/material-rounded/24/000000/room-sound.png"/>
+          </span> 
+          <input type="checkbox" class="hidden" id="audio_setting3" checked>
+          <div class="slider"></div>
+        </label>
+    </div>    
+</footer>
 </body>
 </html>

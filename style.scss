@@ -1,11 +1,234 @@
-body{
+/*# sourceMappingURL=style.css.map */
+*{
+    text-decoration: none;
+}
+#audio-bg{
+    display: none;
+}
+@media only screen and  (max-width: 320px){
+    #bgvid{
+        position: absolute;
+        background: url(assets/MOBILE-Cyberpunk-2077-City.mp4) no-repeat;
+        object-fit: cover;
+        z-index: -100;
+    }
+    .navbar, .nav, a, ul{
+        display: none;
+        transition: ease-in;
+    }
+}
+@font-face{
+    font-family: NeoTech;
+    src: url(./fonts/NeoTech.ttf);
+}
+body {
+    display: absolute;
+    width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
+    background-color:#121513;
 }
-video#bgvid {
-    position: fixed; right: 0; bottom: 0;
-    min-width: 100%; min-height: 100%;
-    width: auto; height: auto; z-index: -100;
-    background: url(assets/cyberpunk.jpg) no-repeat;
-    background-size: cover;
+#bgvid {
+    position: absolute;
+    width: 100%; 
+    height: 100%; 
+    z-index: -100;
+    object-fit: cover;
+}
+body.header-top, .main-conteneur{
+    z-index: 1; 
+}
+#logo{
+    display: block;
+}
+.navbar a,a::after{
+    display: flex;
+    justify-content: center;
+    width:18%;
+    height: 25%;
+    font-weight: 900;
+    font-family: NeoTech;
+    background:linear-gradient(150deg,rgba(255, 255, 0, 0.8) 90%, transparent 10%);
+    color:#101916;
+    letter-spacing:1.8px;
+    line-height:1.25em;
+    position:relative;
+    text-transform: uppercase;
+    font-size: 1.8vw;
+    border-radius: 8px;
+}
+.navbar a:hover{
+    transition-delay: 0.5s;
+    background:linear-gradient(150deg,rgba(255, 255, 0, 100%)100%, transparent 0%);
+}
+.navbar a::after{
+    width:100%;
+    height:100%;
+    --slice-0:inset(50% 50% 50% 50%);
+    --slice-1:inset(80% -6px 0 0);
+    --slice-2:inset(50% -6px 30% 0);
+    --slice-3:inset(10% -6px 85% 0);
+    --slice-4:inset(40% -6px 43% 0);
+    --slice-5:inset(80% -6px 5% 0);
+    content:'CYBERPUNK';
+    display:flex;
+    position:absolute;
+    background:linear-gradient(135deg,#FFFF62 95%, #000 5%);
+    text-shadow: -3px -3px 0 #000 , 3px 3px 0 #ff0;
+    clip-path:var(--slice-0);
+}
+  
+.navbar a:hover::after{
+    animation: glitch 1s;
+    animation-timing-function:steps(2,end);
+}
+ul{
+    margin: 0;
+}
+.navbar{
+    margin: 3%;
+}
+a.nav{
+    padding: 11px 0px;
+    display: inline-flex;
+    justify-content: center;
+}
+@keyframes glitch {
+    0% {
+      clip-path: var(--slice-1);
+      transform: translate(-20px, -10px);
+    }
+    
+    10% {
+      clip-path: var(--slice-3);
+      transform: translate(10px, 10px);
+    }
+    
+    20% {
+      clip-path: var(--slice-1);
+      transform: translate(-10px, 10px);
+    }
+    
+    30% {
+      clip-path: var(--slice-3);
+      transform: translate(0px, 5px);
+    }
+    
+    40% {
+      clip-path: var(--slice-2);
+      transform: translate(-5px, 0px);
+    }
+    
+    50% {
+      clip-path: var(--slice-3);
+      transform: translate(5px, 0px);
+    }
+    
+    60% {
+      clip-path: var(--slice-4);
+      transform: translate(5px, 10px);
+    }
+    
+    70% {
+      clip-path: var(--slice-2);
+      transform: translate(-10px, 10px);
+    }
+    
+    80% {
+      clip-path: var(--slice-5);
+      transform: translate(20px, -10px);
+    }
+    
+    90% {
+      clip-path: var(--slice-1);
+      transform: translate(-10px, 0px);
+    }
+    
+    100% {
+      clip-path: var(--slice-1);
+      transform: translate(0);
+    }
+}
+
+/* SOUND WIDGET STYLE */
+
+.hidden {
+    position:absolute;
+    left:-10000vw;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
+switch {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+.slider {
+    position: relative;
+    top: 32.5vw;
+    left: 0rem;
+    width: 4em;
+    height: 1.5em;
+    border-radius: 50px;
+    -webkit-transition: .4s;
+    transition: .4s;
+    margin-left: -5vw;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.5em;
+    width: 1.5em;
+    right: 0px;
+    bottom: 0px;
+    background: rgb(0, 0, 0);
+    border-radius: 50%;
+    -webkit-transition: .4s;
+    transition: .4s;
+    box-shadow: 0 0 30px rgb(0, 0, 0);
+}
+#audio_setting3:checked + .slider
+{
+    background: rgba(255, 255, 0, 0.8);  
+}
+#audio_setting3:not(:checked) + .slider {
+    background: rgb(73, 67, 67);
+}
+#audio_setting3:not(:checked) + .slider:before {
+    right: 40px;
+}
+label {
+    position: absolute; 
+}
+.container3 .slider {
+    position: relative;
+    left: 9vw;
+}
+.container3 .slider:before {
+    position: absolute;
+    line-height: 40px;
+    text-align: center;  
+}
+#audio_setting2:checked + .slider:before {
+    content: "ON";
+}
+#audio_setting2:not(:checked) + .slider:before {
+    content: "OFF";
+}
+.container3 .sound_label {
+    position: relative;
+    top: 34vw;
+    left: 1.5vw;
+    font-size: 1.8em;
+    bottom: 2vw;
+}
+.sound_label{
+    position: relative;
+    background-color: rgba(255, 255, 0, 0.8);
+    display: flex;
+    width: 100%;
+    border-radius: 8px;
 }
