@@ -16,13 +16,30 @@
         display: none;
         transition: ease-in;
     }
+    #logo{
+        position: absolute;
+        height: 50%;
+        z-index: 1;
+        left: 13px;
+        top: -8px;
+    }
+    .nav-box{
+        position: relative;
+        display: flex;
+        width: 320px;
+        height: 150px;
+        background: rgba(0, 0, 0, 0.8);
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
 }
 @font-face{
     font-family: NeoTech;
     src: url(./fonts/NeoTech.ttf);
 }
 body {
-    display: absolute;
+    position: absolute;
     width: 100%;
     height: 100%;
     margin: 0;
@@ -36,17 +53,19 @@ body {
     z-index: -100;
     object-fit: cover;
 }
-body.header-top, .main-conteneur{
-    z-index: 1; 
-}
-#logo{
-    display: block;
+#logo img{
+    position: absolute;
+    width: auto;
+    height: 40%;
+    display: flex;
+    margin-left: 83%;
+    top: 40px;
 }
 .navbar a,a::after{
     display: flex;
     justify-content: center;
-    width:18%;
-    height: 25%;
+    width:17%;
+    height: 20%;
     font-weight: 900;
     font-family: NeoTech;
     background:linear-gradient(150deg,rgba(255, 255, 0, 0.8) 90%, transparent 10%);
@@ -78,7 +97,6 @@ body.header-top, .main-conteneur{
     text-shadow: -3px -3px 0 #000 , 3px 3px 0 #ff0;
     clip-path:var(--slice-0);
 }
-  
 .navbar a:hover::after{
     animation: glitch 1s;
     animation-timing-function:steps(2,end);
@@ -87,7 +105,8 @@ ul{
     margin: 0;
 }
 .navbar{
-    margin: 3%;
+    padding-top: 50px;
+    padding-left: 55px;
 }
 a.nav{
     padding: 11px 0px;
@@ -151,7 +170,51 @@ a.nav{
     }
 }
 
-/* SOUND WIDGET STYLE */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SOUND WIDGET STYLE 
 
 .hidden {
     position:absolute;
@@ -161,14 +224,10 @@ a.nav{
     height:1px;
     overflow:hidden;
 }
-switch {
-    position: absolute;
-    top: 5px;
-    left: 5px;
-}
 .slider {
-    position: relative;
-    top: 32.5vw;
+    position: absolute;
+    display: flex;
+    top: 25vw;
     left: 0rem;
     width: 4em;
     height: 1.5em;
@@ -176,9 +235,11 @@ switch {
     -webkit-transition: .4s;
     transition: .4s;
     margin-left: -5vw;
+    margin-top: 7.5vw;
 }
 .slider:before {
     position: absolute;
+    display: flex;
     content: "";
     height: 1.5em;
     width: 1.5em;
@@ -204,11 +265,13 @@ label {
     position: absolute; 
 }
 .container3 .slider {
-    position: relative;
+    position: absolute;
+    display: flex;
     left: 9vw;
 }
 .container3 .slider:before {
     position: absolute;
+    display: flex;
     line-height: 40px;
     text-align: center;  
 }
@@ -220,15 +283,17 @@ label {
 }
 .container3 .sound_label {
     position: relative;
-    top: 34vw;
-    left: 1.5vw;
-    font-size: 1.8em;
-    bottom: 2vw;
-}
-.sound_label{
-    position: relative;
-    background-color: rgba(255, 255, 0, 0.8);
     display: flex;
     width: 100%;
-    border-radius: 8px;
+    height: 100%;
+    left: 1.5vw;
+    font-size: 1.8em;
+    margin-top: 32.5vw;
 }
+.sound_label{
+    position: absolute;
+    height: 100%;
+    background-color: rgba(255, 255, 0, 0.8);
+    width: 100%;
+    border-radius: 8px;
+} */

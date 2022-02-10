@@ -20,13 +20,32 @@
     display: none;
     transition: ease-in;
   }
+
+  #logo {
+    position: absolute;
+    height: 50%;
+    z-index: 1;
+    left: 13px;
+    top: -8px;
+  }
+
+  .nav-box {
+    position: relative;
+    display: flex;
+    width: 320px;
+    height: 150px;
+    background: rgba(0, 0, 0, 0.8);
+    border: none;
+    margin: 0;
+    padding: 0;
+  }
 }
 @font-face {
   font-family: NeoTech;
   src: url(./fonts/NeoTech.ttf);
 }
 body {
-  display: absolute;
+  position: absolute;
   width: 100%;
   height: 100%;
   margin: 0;
@@ -43,19 +62,20 @@ body {
      object-fit: cover;
 }
 
-body.header-top, .main-conteneur {
-  z-index: 1;
-}
-
-#logo {
-  display: block;
+#logo img {
+  position: absolute;
+  width: auto;
+  height: 40%;
+  display: flex;
+  margin-left: 83%;
+  top: 40px;
 }
 
 .navbar a, a::after {
   display: flex;
   justify-content: center;
-  width: 18%;
-  height: 25%;
+  width: 17%;
+  height: 20%;
   font-weight: 900;
   font-family: NeoTech;
   background: linear-gradient(150deg, rgba(255, 255, 0, 0.8) 90%, transparent 10%);
@@ -103,7 +123,8 @@ ul {
 }
 
 .navbar {
-  margin: 3%;
+  padding-top: 50px;
+  padding-left: 55px;
 }
 
 a.nav {
@@ -227,93 +248,86 @@ a.nav {
     transform: translate(0);
   }
 }
-/* SOUND WIDGET STYLE */
+/* SOUND WIDGET STYLE 
+
 .hidden {
-  position: absolute;
-  left: -10000vw;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
+    position:absolute;
+    left:-10000vw;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
 }
-
-switch {
-  position: absolute;
-  top: 5px;
-  left: 5px;
-}
-
 .slider {
-  position: relative;
-  top: 32.5vw;
-  left: 0rem;
-  width: 4em;
-  height: 1.5em;
-  border-radius: 50px;
-  transition: 0.4s;
-  margin-left: -5vw;
+    position: absolute;
+    display: flex;
+    top: 25vw;
+    left: 0rem;
+    width: 4em;
+    height: 1.5em;
+    border-radius: 50px;
+    -webkit-transition: .4s;
+    transition: .4s;
+    margin-left: -5vw;
+    margin-top: 7.5vw;
 }
-
 .slider:before {
-  position: absolute;
-  content: "";
-  height: 1.5em;
-  width: 1.5em;
-  right: 0px;
-  bottom: 0px;
-  background: black;
-  border-radius: 50%;
-  transition: 0.4s;
-  box-shadow: 0 0 30px black;
+    position: absolute;
+    display: flex;
+    content: "";
+    height: 1.5em;
+    width: 1.5em;
+    right: 0px;
+    bottom: 0px;
+    background: rgb(0, 0, 0);
+    border-radius: 50%;
+    -webkit-transition: .4s;
+    transition: .4s;
+    box-shadow: 0 0 30px rgb(0, 0, 0);
 }
-
-#audio_setting3:checked + .slider {
-  background: rgba(255, 255, 0, 0.8);
+#audio_setting3:checked + .slider
+{
+    background: rgba(255, 255, 0, 0.8);  
 }
-
 #audio_setting3:not(:checked) + .slider {
-  background: #494343;
+    background: rgb(73, 67, 67);
 }
-
 #audio_setting3:not(:checked) + .slider:before {
-  right: 40px;
+    right: 40px;
 }
-
 label {
-  position: absolute;
+    position: absolute; 
 }
-
 .container3 .slider {
-  position: relative;
-  left: 9vw;
+    position: absolute;
+    display: flex;
+    left: 9vw;
 }
-
 .container3 .slider:before {
-  position: absolute;
-  line-height: 40px;
-  text-align: center;
+    position: absolute;
+    display: flex;
+    line-height: 40px;
+    text-align: center;  
 }
-
 #audio_setting2:checked + .slider:before {
-  content: "ON";
+    content: "ON";
 }
-
 #audio_setting2:not(:checked) + .slider:before {
-  content: "OFF";
+    content: "OFF";
 }
-
 .container3 .sound_label {
-  position: relative;
-  top: 34vw;
-  left: 1.5vw;
-  font-size: 1.8em;
-  bottom: 2vw;
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    left: 1.5vw;
+    font-size: 1.8em;
+    margin-top: 32.5vw;
 }
-
-.sound_label {
-  position: relative;
-  background-color: rgba(255, 255, 0, 0.8);
-  display: flex;
-  width: 100%;
-  border-radius: 8px;
-}/*# sourceMappingURL=style.css.map */
+.sound_label{
+    position: absolute;
+    height: 100%;
+    background-color: rgba(255, 255, 0, 0.8);
+    width: 100%;
+    border-radius: 8px;
+} *//*# sourceMappingURL=style.css.map */
