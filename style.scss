@@ -2,7 +2,14 @@
 *{
     text-decoration: none;
 }
+@font-face{
+    font-family: NeoTech;
+    src: url(./fonts/NeoTech.ttf);
+}
 #audio-bg{
+    display: none;
+}
+.burger-mb{
     display: none;
 }
 @media only screen and  (max-width: 320px){
@@ -33,10 +40,41 @@
         margin: 0;
         padding: 0;
     }
-}
-@font-face{
-    font-family: NeoTech;
-    src: url(./fonts/NeoTech.ttf);
+    .burger-mb, .nav-burger{
+        position: absolute;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 50% 50%;
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+        z-index: 20;
+        width: 70%;
+        height: 60%;
+        background: transparent;
+        right: 3px;
+        bottom: 5px;
+    }
+    .nav-burger{
+        position: relative;
+        display: flex;
+        z-index: 20;
+        width: 100%;
+        height: 70%;
+        background:linear-gradient(150deg,rgba(255, 255, 0, 0.8) 90%, transparent 10%);
+        color:#101916;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.8rem;
+        border-radius: 8px;
+        letter-spacing:1.8px;
+        line-height:1.25em;
+        font-weight: 900;
+        font-family: NeoTech;
+    }
+    .nav-burger a:hover{
+        transition-delay: 0.5s;
+        background:linear-gradient(150deg,rgba(255, 255, 0, 100%));
+    }
 }
 body {
     position: absolute;
@@ -115,60 +153,51 @@ a.nav{
 }
 @keyframes glitch {
     0% {
-      clip-path: var(--slice-1);
-      transform: translate(-20px, -10px);
+        clip-path: var(--slice-1);
+        transform: translate(-20px, -10px);
     }
-    
     10% {
-      clip-path: var(--slice-3);
-      transform: translate(10px, 10px);
+        clip-path: var(--slice-3);
+        transform: translate(10px, 10px);
     }
-    
     20% {
-      clip-path: var(--slice-1);
+        clip-path: var(--slice-1);
       transform: translate(-10px, 10px);
     }
-    
     30% {
-      clip-path: var(--slice-3);
+        clip-path: var(--slice-3);
       transform: translate(0px, 5px);
     }
-    
     40% {
       clip-path: var(--slice-2);
       transform: translate(-5px, 0px);
     }
-    
     50% {
-      clip-path: var(--slice-3);
-      transform: translate(5px, 0px);
+        clip-path: var(--slice-3);
+        transform: translate(5px, 0px);
     }
-    
     60% {
-      clip-path: var(--slice-4);
+        clip-path: var(--slice-4);
       transform: translate(5px, 10px);
     }
-    
     70% {
-      clip-path: var(--slice-2);
-      transform: translate(-10px, 10px);
+        clip-path: var(--slice-2);
+        transform: translate(-10px, 10px);
     }
-    
     80% {
-      clip-path: var(--slice-5);
-      transform: translate(20px, -10px);
+        clip-path: var(--slice-5);
+        transform: translate(20px, -10px);
     }
-    
     90% {
-      clip-path: var(--slice-1);
-      transform: translate(-10px, 0px);
+        clip-path: var(--slice-1);
+        transform: translate(-10px, 0px);
     }
-    
     100% {
-      clip-path: var(--slice-1);
-      transform: translate(0);
+        clip-path: var(--slice-1);
+        transform: translate(0);
     }
 }
+
 
 
 
