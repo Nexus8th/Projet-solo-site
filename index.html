@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Spline+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
     <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/12339943d6.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="assets/sam-logo-cyberpunk.png">
     <title>NightWave</title>
@@ -34,7 +35,7 @@
         </div>
     </nav>
     <div class="nav-box">
-        <div class="burger-mb">
+        <div class="burger-mb fade">
             <a href="01" class="nav-burger">HOME</a>
             <a href="02" class="nav-burger">PLAY</a>
             <a href="03" class="nav-burger">RESPONSIVE</a>
@@ -45,8 +46,41 @@
         </div>
     </div>
 </header>
-<main class="main-conteneur">
-    <span class="text-contenu">#</span>
+<main>
+    <div class="container">
+        <div class="image">
+            <img class="fade" src="images/cp01-HD.jpg" alt="Cyberpunk-01-image" width="100%">
+        </div>
+        <div class="image">
+            <img class="fade" src="images/cp02-HD.png" alt="Cyberpunk-02-image" width="100%">
+        </div>
+        <div class="image">
+            <img class="fade" src="images/cp03-HD.jpg" alt="Cyberpunk-03-image" width="100%">
+        </div>
+        <div class="image">
+            <img class="fade" src="images/cp04-HD.jpg" alt="Cyberpunk-04-image" width="100%">
+        </div>
+        <div class="image">
+            <img class="fade" src="images/cp05-HD.jpg" alt="Cyberpunk-05-image" width="100%">
+        </div>
+        <div class="image">
+            <img class="fade" src="images/cp06-HD.jpg" alt="Cyberpunk-06-image" width="100%">
+        </div>
+
+        <i id="prev" onclick="showImage(-1)" class="fa-solid fa-angle-left"></i>
+        <i id="next" onclick="showImage(1)" class="fa-solid fa-angle-right"></i>
+
+        <div class="dots">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+
+    </div>
+    
 </main>
 <footer class="footer">
 </footer>

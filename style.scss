@@ -12,142 +12,87 @@
 .burger-mb{
     display: none;
 }
-@media only screen and  (max-width: 320px){
-    #bgvid{
-        position: absolute;
-        background: url(assets/MOBILE-Cyberpunk-2077-City.mp4) no-repeat;
-        object-fit: cover;
-        z-index: -100;
-    }
-    .navbar, .nav, a, ul{
-        display: none;
-        transition: ease-in;
-    }
-    #logo{
-        position: absolute;
-        height: 50%;
-        z-index: 1;
-        left: 13px;
-        top: -8px;
-    }
-    .nav-box{
-        position: relative;
-        display: flex;
-        width: 320px;
-        height: 150px;
-        background: rgba(0, 0, 0, 0.8);
-        border: none;
-        margin: 0;
-        padding: 0;
-    }
-    .nav-burger{
-        position: absolute;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 50% 50%;
-        grid-column-gap: 5px;
-        grid-row-gap: 5px;
-        z-index: 20;
-        width: 70%;
-        height: 60%;
-        background: transparent;
-        right: 3px;
-        bottom: 5px;
-    }
-    .nav-burger{
-        position: relative;
-        display: flex;
-        z-index: 20;
-        width: 100%;
-        height: 70%;
-        background:linear-gradient(150deg,rgba(255, 255, 0, 0.8) 90%, transparent 10%);
-        color:#101916;
-        justify-content: center;
-        align-items: center;
-        font-size: 0.8rem;
-        border-radius: 8px;
-        letter-spacing:1.8px;
-        line-height:1.25em;
-        font-weight: 900;
-        font-family: NeoTech;
-        transition: all .5s ease-in-out;
-    }
-    .nav-burger a:hover{
-        transition-delay: 0.5s;
-        background:linear-gradient(150deg,rgba(255, 255, 0, 100%));
-    }
-    .burger-btn{
-        position: absolute;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 1.75rem;
-        height: 1.75rem;
-        right: 8px;
-        top: 8px;
-        cursor: pointer;
-        transition: all .5s ease-in-out;
-        background: rgb(255, 255, 0, 0.8);
-        border-radius: 8px;
-    }
-    .burger-btn-style{
-        position: absolute;
-        background: rgb(0, 0, 0);
-        width: 20px;
-        height: 2.5px;
-        border-radius: 5px;
-        transition: all .5s ease-in-out;
-    }
-    .burger-btn-style::before, .burger-btn-style::after{
-        content: '';
-        position: absolute;
-        width: 20px;
-        height: 2.5px;
-        background: rgb(0, 0, 0);
-        border-radius: 5px;
-        transition: all .5s ease-in-out;
-    }
-    .burger-btn-style::before{
-        transform: translateY(-7px);
-    }
-    .burger-btn-style::after{
-        transform: translateY(6px);
-    }
-    .burger-btn.open .burger-btn-style{
-        transform: translateX(-20px);
-        background: transparent;
-        box-shadow: none;
-    }
-    .burger-btn.open .burger-btn-style::before{
-        transform: rotate(45deg) translate(14px, -14px);
-    }
-    .burger-btn.open .burger-btn-style::after{
-        transform: rotate(-45deg) translate(14px, 14px);
-    }
-    .burger-mb{
-        display: none;
-        -moz-transition: all 1s linear;
-        transition: all 1s linear;
-    }
-    .burger-mb-show{
-        position: absolute;
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 50% 50%;
-        grid-column-gap: 5px;
-        grid-row-gap: 5px;
-        z-index: 20;
-        width: 70%;
-        height: 60%;
-        background: transparent;
-        right: 3px;
-        bottom: 5px;
-        -moz-transition: all 1s linear;
-        transition: all 1s linear;
-    }
+@keyframes fade{
+    from {opacity: .6}
+    to {opacity: 1}
 }
-body {
+.container{
+    position: relative;
+    width: 60%;
+    height: 45vh;
+    display: flex;
+    margin: auto;
+    top: 25vh;
+    padding: 0;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+#prev{
     position: absolute;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    top: 43%;
+    left: 0;
+    cursor: pointer;
+    padding: 16px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: 0.3s ease;
+    border-radius: 0 5px 5px 0;
+    user-select: none;
+}
+#next{
+    position: absolute;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.4);
+    top: 43%;
+    right: 0;
+    cursor: pointer;
+    padding: 16px;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: 0.3s ease;
+    border-radius: 6px 0 0 6px;
+    user-select: none;
+}
+#prev:hover, #next:hover{
+    background-color: rgb(255, 255, 0, 0.8);
+}
+.dots{
+    text-align: center;
+    margin: 0%;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 0px 4px;
+    border-radius: 8px 8px 8px 8px;
+}
+.dot{
+    height: 8px;
+    width: 8px;
+    background-color:rgb(128, 118, 118);
+    display: inline-block;
+    border-radius: 50%;
+    margin: 0 5px;
+    transition: background-color 0.6s ease;
+}
+.active{
+    background-color:rgb(255, 255, 0 ,0.8)
+}
+.fade{
+    animation: fade .7s;
+}
+.image{
+    position: relative;
+    width: auto;
+    height: auto;
+    margin: auto;
+    padding: auto;
+    border: 4px solid rgba(255, 255, 0, 0.8);
+    border-radius: 5px 5px 5px 5px;
+    
+}    
+
+body {
     width: 100%;
     height: 100%;
     margin: 0;
@@ -164,9 +109,9 @@ body {
 #logo img{
     position: absolute;
     width: auto;
-    height: 40%;
+    height: 30%;
     display: flex;
-    margin-left: 83%;
+    right: 25px;
     top: 40px;
 }
 .navbar a,a::after{
@@ -267,11 +212,207 @@ a.nav{
         transform: translate(0);
     }
 }
+@media (max-width: 320px){
+    #bgvid{
+        position: absolute;
+        background: url(assets/MOBILE-Cyberpunk-2077-City.mp4) no-repeat;
+        object-fit: cover;
+        z-index: -100;
+    }
+    .navbar, .nav, a, ul{
+        display: none;
+        transition: ease-in;
+    }
+    #logo{
+        position: absolute;
+        width: 25%;
+        height: 50%;
+        z-index: 1;
+        left: 13px;
+        top: 8px;
+    }
+    .nav-box{
+        position: relative;
+        display: flex;
+        width: 320px;
+        height: 150px;
+        background: rgba(0, 0, 0, 0.7);
+        border: none;
+        margin: 0;
+        padding: 0;
+    }
+    .nav-burger{
+        position: absolute;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 50% 50%;
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+        z-index: 20;
+        width: 70%;
+        height: 60%;
+        background: transparent;
+        right: 3px;
+        bottom: 5px;
+    }
+    .nav-burger{
+        position: relative;
+        display: flex;
+        z-index: 20;
+        width: 100%;
+        height: 70%;
+        background:linear-gradient(150deg,rgba(255, 255, 0, 0.8) 90%, transparent 10%);
+        color:#101916;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.8rem;
+        border-radius: 8px;
+        letter-spacing:1.8px;
+        line-height:1.25em;
+        font-weight: 900;
+        font-family: NeoTech;
+        transition: all .5s ease-in-out;
+    }
+    .nav-burger a:hover{
+        transition-delay: 0.5s;
+        background:linear-gradient(150deg,rgba(255, 255, 0, 100%));
+    }
+    .burger-btn{
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1.75rem;
+        height: 1.75rem;
+        right: 8px;
+        top: 8px;
+        cursor: pointer;
+        transition: all .5s ease-in-out;
+        background: rgb(255, 255, 0, 0.8);
+        border-radius: 8px;
+    }
+    .burger-btn-style{
+        position: absolute;
+        background: rgb(0, 0, 0);
+        width: 20px;
+        height: 2.5px;
+        border-radius: 5px;
+        transition: all .5s ease-in-out;
+    }
+    .burger-btn-style::before, .burger-btn-style::after{
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 2.5px;
+        background: rgb(0, 0, 0);
+        border-radius: 5px;
+        transition: all .5s ease-in-out;
+    }
+    .burger-btn-style::before{
+        transform: translateY(-7px);
+    }
+    .burger-btn-style::after{
+        transform: translateY(6px);
+    }
+    .burger-btn.open .burger-btn-style{
+        transform: translateX(-20px);
+        background: transparent;
+        box-shadow: none;
+    }
+    .burger-btn.open .burger-btn-style::before{
+        transform: rotate(45deg) translate(14px, -14px);
+    }
+    .burger-btn.open .burger-btn-style::after{
+        transform: rotate(-45deg) translate(14px, 14px);
+    }
+    .burger-mb{
+        display: none;
+        -moz-transition: 1s ease;
+        transition: 1s ease;
+    }
+    .burger-mb-show{
+        position: absolute;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 50% 50%;
+        grid-column-gap: 5px;
+        grid-row-gap: 5px;
+        z-index: 20;
+        width: 70%;
+        height: 60%;
+        background: transparent;
+        right: 3px;
+        bottom: 5px;
+        -moz-transition: 1s ease;
+        transition: 1s ease;
+    }
+    .container{
+        width: 100%;
+        height: 68vh;
+        margin: auto;
+        display: flex;
+        top: 0px;
+        justify-content:center;
+        align-items:center;
+        flex-direction: column;
+        position: relative;
+        background: rgba(0, 0, 0, 0.7)
+    }
+    #prev{
+        position: absolute;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.4);
+        top: 43%;
+        left: 0;
+        cursor: pointer;
+        padding: 16px;
+        font-weight: bold;
+        font-size: 1rem;
+        transition: 0.6s ease;
+        border-radius: 0 5px 5px 0;
+        user-select: none;
+    }
+    #next{
+        position: absolute;
+        color: white;
+        background-color: rgba(0, 0, 0, 0.4);
+        top: 43%;
+        right: 0;
+        cursor: pointer;
+        padding: 16px;
+        font-weight: bold;
+        font-size: 1rem;
+        transition: 0.6s ease;
+        border-radius: 6px 0 0 6px;
+        user-select: none;
+    }
+    #prev:hover, #next:hover{
+        background-color: rgb(255, 255, 0, 0.8);
+    }
+    .dots{
+        text-align: center;
+        margin: 2%;
+    }
+    .dot{
+        height: 8px;
+        width: 8px;
+        background-color:rgb(128, 118, 118);
+        display: inline-block;
+        border-radius: 50%;
+        margin: 0 2px;
+        transition: background-color 0.6s ease;
+    }
+    .active{
+        background-color:rgb(255, 255, 0 ,0.8)
+    }
+    .fade{
+        animation: fade 1.5s;
+    }
+    .image{
+        border: none;
+    }
 
-
-
-
-
+}
 
 
 
