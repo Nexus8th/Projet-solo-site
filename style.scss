@@ -89,9 +89,8 @@
     padding: auto;
     border: 4px solid rgba(255, 255, 0, 0.8);
     border-radius: 5px 5px 5px 5px;
-    
+    display: block;
 }    
-
 body {
     width: 100%;
     height: 100%;
@@ -411,7 +410,6 @@ a.nav{
     .image{
         border: none;
     }
-
 }
 
 
