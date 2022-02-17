@@ -1,4 +1,10 @@
 /*# sourceMappingURL=style.css.map */
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 4 version
+*/
 * {
   text-decoration: none;
 }
@@ -23,7 +29,6 @@
     opacity: 1;
   }
 }
-
 @keyframes fade {
   from {
     opacity: 0.6;
@@ -58,9 +63,9 @@
   transition: 0.3s ease;
   border-radius: 0 5px 5px 0;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 #next {
@@ -76,9 +81,9 @@
   transition: 0.3s ease;
   border-radius: 6px 0 0 6px;
   -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 #prev:hover, #next:hover {
@@ -109,7 +114,7 @@
 
 .fade {
   -webkit-animation: fade 0.7s;
-          animation: fade 0.7s;
+  animation: fade 0.7s;
 }
 
 .image {
@@ -137,7 +142,7 @@ body {
   height: 100%;
   z-index: -100;
   -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 #logo img {
@@ -186,14 +191,14 @@ body {
   background: linear-gradient(135deg, #FFFF62 95%, #000 5%);
   text-shadow: -3px -3px 0 #000, 3px 3px 0 #ff0;
   -webkit-clip-path: var(--slice-0);
-          clip-path: var(--slice-0);
+  clip-path: var(--slice-0);
 }
 
 .navbar a:hover::after {
   -webkit-animation: glitch 1s;
-          animation: glitch 1s;
+  animation: glitch 1s;
   -webkit-animation-timing-function: steps(2, end);
-          animation-timing-function: steps(2, end);
+  animation-timing-function: steps(2, end);
 }
 
 ul {
@@ -214,124 +219,123 @@ a.nav {
 @-webkit-keyframes glitch {
   0% {
     -webkit-clip-path: var(--slice-1);
-            clip-path: var(--slice-1);
+    clip-path: var(--slice-1);
     transform: translate(-20px, -10px);
   }
   10% {
     -webkit-clip-path: var(--slice-3);
-            clip-path: var(--slice-3);
+    clip-path: var(--slice-3);
     transform: translate(10px, 10px);
   }
   20% {
     -webkit-clip-path: var(--slice-1);
-            clip-path: var(--slice-1);
+    clip-path: var(--slice-1);
     transform: translate(-10px, 10px);
   }
   30% {
     -webkit-clip-path: var(--slice-3);
-            clip-path: var(--slice-3);
+    clip-path: var(--slice-3);
     transform: translate(0px, 5px);
   }
   40% {
     -webkit-clip-path: var(--slice-2);
-            clip-path: var(--slice-2);
+    clip-path: var(--slice-2);
     transform: translate(-5px, 0px);
   }
   50% {
     -webkit-clip-path: var(--slice-3);
-            clip-path: var(--slice-3);
+    clip-path: var(--slice-3);
     transform: translate(5px, 0px);
   }
   60% {
     -webkit-clip-path: var(--slice-4);
-            clip-path: var(--slice-4);
+    clip-path: var(--slice-4);
     transform: translate(5px, 10px);
   }
   70% {
     -webkit-clip-path: var(--slice-2);
-            clip-path: var(--slice-2);
+    clip-path: var(--slice-2);
     transform: translate(-10px, 10px);
   }
   80% {
     -webkit-clip-path: var(--slice-5);
-            clip-path: var(--slice-5);
+    clip-path: var(--slice-5);
     transform: translate(20px, -10px);
   }
   90% {
     -webkit-clip-path: var(--slice-1);
-            clip-path: var(--slice-1);
+    clip-path: var(--slice-1);
     transform: translate(-10px, 0px);
   }
   100% {
     -webkit-clip-path: var(--slice-1);
-            clip-path: var(--slice-1);
+    clip-path: var(--slice-1);
     transform: translate(0);
   }
 }
-
 @keyframes glitch {
   0% {
     -webkit-clip-path: var(--slice-1);
-            clip-path: var(--slice-1);
+    clip-path: var(--slice-1);
     transform: translate(-20px, -10px);
   }
   10% {
     -webkit-clip-path: var(--slice-3);
-            clip-path: var(--slice-3);
+    clip-path: var(--slice-3);
     transform: translate(10px, 10px);
   }
   20% {
     -webkit-clip-path: var(--slice-1);
-            clip-path: var(--slice-1);
+    clip-path: var(--slice-1);
     transform: translate(-10px, 10px);
   }
   30% {
     -webkit-clip-path: var(--slice-3);
-            clip-path: var(--slice-3);
+    clip-path: var(--slice-3);
     transform: translate(0px, 5px);
   }
   40% {
     -webkit-clip-path: var(--slice-2);
-            clip-path: var(--slice-2);
+    clip-path: var(--slice-2);
     transform: translate(-5px, 0px);
   }
   50% {
     -webkit-clip-path: var(--slice-3);
-            clip-path: var(--slice-3);
+    clip-path: var(--slice-3);
     transform: translate(5px, 0px);
   }
   60% {
     -webkit-clip-path: var(--slice-4);
-            clip-path: var(--slice-4);
+    clip-path: var(--slice-4);
     transform: translate(5px, 10px);
   }
   70% {
     -webkit-clip-path: var(--slice-2);
-            clip-path: var(--slice-2);
+    clip-path: var(--slice-2);
     transform: translate(-10px, 10px);
   }
   80% {
     -webkit-clip-path: var(--slice-5);
-            clip-path: var(--slice-5);
+    clip-path: var(--slice-5);
     transform: translate(20px, -10px);
   }
   90% {
     -webkit-clip-path: var(--slice-1);
-            clip-path: var(--slice-1);
+    clip-path: var(--slice-1);
     transform: translate(-10px, 0px);
   }
   100% {
     -webkit-clip-path: var(--slice-1);
-            clip-path: var(--slice-1);
+    clip-path: var(--slice-1);
     transform: translate(0);
   }
 }
-@media (max-width: 320px) {
+@media (max-width: 540px) {
   #bgvid {
     position: absolute;
     background: url(assets/MOBILE-Cyberpunk-2077-City.mp4) no-repeat;
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     z-index: -100;
   }
 
@@ -342,17 +346,17 @@ a.nav {
 
   #logo {
     position: absolute;
-    width: 25%;
+    width: 28%;
     height: 50%;
     z-index: 1;
-    left: 13px;
-    top: 8px;
+    left: 8px;
+    top: 32px;
   }
 
   .nav-box {
     position: relative;
     display: flex;
-    width: 320px;
+    width: auto;
     height: 150px;
     background: rgba(0, 0, 0, 0.7);
     border: none;
@@ -362,8 +366,11 @@ a.nav {
 
   .nav-burger {
     position: absolute;
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 5px 1fr;
     grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: 50% 5px 50%;
     grid-template-rows: 50% 50%;
     grid-column-gap: 5px;
     grid-row-gap: 5px;
@@ -373,6 +380,26 @@ a.nav {
     background: transparent;
     right: 3px;
     bottom: 5px;
+  }
+
+  .nav-burger > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+
+  .nav-burger > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+
+  .nav-burger > *:nth-child(3) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+
+  .nav-burger > *:nth-child(4) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
   }
 
   .nav-burger {
@@ -406,8 +433,8 @@ a.nav {
     align-items: center;
     width: 1.75rem;
     height: 1.75rem;
-    right: 8px;
-    top: 8px;
+    right: 10px;
+    top: 10px;
     cursor: pointer;
     transition: all 0.5s ease-in-out;
     background: rgba(255, 255, 0, 0.8);
@@ -462,8 +489,11 @@ a.nav {
 
   .burger-mb-show {
     position: absolute;
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 5px 1fr;
     grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: 50% 5px 50%;
     grid-template-rows: 50% 50%;
     grid-column-gap: 5px;
     grid-row-gap: 5px;
@@ -474,6 +504,26 @@ a.nav {
     right: 3px;
     bottom: 5px;
     transition: 1s ease;
+  }
+
+  .burger-mb-show > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+
+  .burger-mb-show > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+
+  .burger-mb-show > *:nth-child(3) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+  }
+
+  .burger-mb-show > *:nth-child(4) {
+    -ms-grid-row: 3;
+    -ms-grid-column: 3;
   }
 
   .container {
@@ -502,9 +552,9 @@ a.nav {
     transition: 0.6s ease;
     border-radius: 0 5px 5px 0;
     -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
 
   #next {
@@ -520,9 +570,9 @@ a.nav {
     transition: 0.6s ease;
     border-radius: 6px 0 0 6px;
     -webkit-user-select: none;
-       -moz-user-select: none;
-        -ms-user-select: none;
-            user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
 
   #prev:hover, #next:hover {
@@ -550,7 +600,7 @@ a.nav {
 
   .fade {
     -webkit-animation: fade 1.5s;
-            animation: fade 1.5s;
+    animation: fade 1.5s;
   }
 
   .image {
